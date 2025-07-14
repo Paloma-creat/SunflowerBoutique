@@ -1,0 +1,71 @@
+/*div {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+Título (ex: Total de Vendas) 
+h2 {
+  font-size: 20px;  /* AUMENTA OU REDUZ AQUI 
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+ Valor (ex: 1500 Unidades) 
+p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}*/
+.card-box {
+  background: rgb(255, 254, 254); 
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  /*border: 1px solid #000;  borda externa preta opcional */
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: none; /* remove sombra interna */
+}
+
+
+
+/* Título: "Total de Vendas", etc */
+.titulo {
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+/* Área do número */
+.valor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Valor em destaque */
+.numero {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0072ce; /* Azul Ford */
+  line-height: 1;
+}
+
+/* Texto "Unid." */
+.unidade {
+  font-size: 12px;
+  line-height: 1;
+}
+
+

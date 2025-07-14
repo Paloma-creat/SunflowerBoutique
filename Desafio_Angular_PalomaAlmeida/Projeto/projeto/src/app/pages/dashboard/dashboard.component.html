@@ -1,0 +1,68 @@
+<!-- Botão do menu -->
+<button
+  class="btn btn-light menu-btn"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasExample"
+  aria-controls="offcanvasExample">
+  ☰
+</button>
+
+<!-- Menu lateral -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="text-center mb-3">
+      <img src="/img/ford.png" alt="Logo Ford" style="width: 100px;" />
+    </div>
+
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToHome()">Home</button>
+    <button class="btn btn-outline-primary w-100 mb-2" routerLink="/dashboard">Dashboard</button>
+    <button class="btn btn-outline-danger w-100 mt-2" (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<!-- Título central -->
+<h2>Dashboard FORD</h2>
+
+<!-- Cards e seletor -->
+<section class="d-flex gap-3 justify-content-around rounded-2 flex-wrap">
+  <div class="shadow border border-black p-3">
+    <h2>Veículo</h2>
+    <select class="form-select" (change)="onChangeSelect($event)">
+      @for (veiculo of veiculos; track veiculo.id) {
+        <option value="{{veiculo.id}}">{{veiculo.vehicle}}</option>
+      }
+    </select>
+  </div>
+
+  <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal" />
+  <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected" />
+  <app-card [titulo]="'Update Software'" [valor]="veiculoSelecionado.softwareUpdates" />
+</section>
+
+<!-- Imagem do carro -->
+<section class="text-center mt-4">
+  <img src="{{ veiculoSelecionado.img }}" class="img-fluid" alt="Imagem do veículo selecionado" />
+</section>
+
+<!-- Tabela de informações -->
+<section class="mt-4">
+  <app-car-table
+    [vin]="veiculoSelecionado.vin"
+    [lat]="vinInfos.lat"
+    [long]="vinInfos.long"
+    [nivelCombustivel]="vinInfos.nivelCombustivel"
+    [odometro]="vinInfos.odometro"
+    [status]="vinInfos.status"
+  />
+</section>

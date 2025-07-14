@@ -1,0 +1,41 @@
+<!-- Botão para abrir o menu lateral -->
+<button
+  class="btn btn-light menu-btn"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasExample"
+  aria-controls="offcanvasExample">
+  ☰
+</button>
+
+<!-- Menu lateral -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    </div>
+
+  <div class="offcanvas-body">
+    <div class="text-center mb-3">
+      <img src="/img/ford.png" alt="Logo Ford" style="width: 100px;" />
+    </div>
+    
+    <!-- Botões do menu -->
+    <button class="btn btn-outline-primary w-100 mb-2" routerLink="/dashboard">Home</button>
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToDashboard()">Dashboard</button>
+    <button class="btn btn-outline-primary w-100 mt-2" (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<!-- Imagem de fundo -->
+<img src="/img/ranger.png" class="bg-image" alt="Carro Ford" />
+
+<!-- Conteúdo Central -->
+<div class="center-box">
+  <h2>Sistema de dados FORD</h2>
+  <p>Seja bem-vindo(a)!</p>
+</div>

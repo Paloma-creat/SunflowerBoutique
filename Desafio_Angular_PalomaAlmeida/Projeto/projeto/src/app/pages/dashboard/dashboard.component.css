@@ -1,0 +1,75 @@
+/* Título */
+h2 {
+  text-align: center;
+  color: #0072ce; /* Azul Ford */
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+/* Botão do menu lateral */
+.menu-btn {
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100px; 
+}
+/* Cards e seletor */
+section.d-flex {
+  margin: 20px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+/* Seletor de veículo */
+section.d-flex > div,
+app-card {
+  width: 220px;
+  height: 120px;
+  background-color: #ffffff;  
+  border: none !important;/* Remove qualquer borda */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+section.d-flex app-card {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block;
+}
+
+
+section.d-flex h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+} 
+
+ /*Imagem do veículo */
+section.text-center img {
+  width: 100%;
+  max-width: 830px;
+  height: auto;
+  display: block;
+  margin: 30px auto 50px auto;
+}
+
+@media (max-width: 768px) {
+  section.text-center img {
+    max-width: 90%;
+  }
+
+  section.mt-4 {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 20px;
+    padding-left: 120px; /* ajusta para telas menores */
+    padding: 0 80px;
+  }
+}
+
