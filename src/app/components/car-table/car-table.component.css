@@ -1,0 +1,128 @@
+/*:host {
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}*/
+
+:host table {
+  margin-top: 30px;        /* afasta a tabela do conteúdo acima */
+  max-width: 1200px;       /* aumenta a largura da tabela */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:host section {
+  padding-bottom: 50px;    /* espaçamento extra no fundo */
+}
+
+
+/* Tabela principal */
+table {
+  width: 100%;
+  table-layout: fixed;/**/
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(223, 5, 5, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Cabeçalho */
+thead th {
+  background-color: #0072ce; /* Azul Ford */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Células do corpo */
+tbody td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+/* Linha alternada */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Linha hover */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Input VIN */
+td.d-flex {
+  justify-content: center;
+  align-items: center;
+}
+
+td.d-flex input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.vin-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+  }
+
+  tbody td::before {
+    /*content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left; */
+
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #0072ce; /* fundo azul */
+    color: white;               /* texto branco */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+}

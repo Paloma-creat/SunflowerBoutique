@@ -1,0 +1,77 @@
+<!-- Botão do menu -->
+<button
+  class="btn btn-light menu-btn"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasExample"
+  aria-controls="offcanvasExample">
+  ☰
+</button>
+
+<!-- Menu lateral -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="text-center mb-3">
+      <img src="/img/Logo.png" alt="Logo Sunflower" style="width: 100px;" />
+    </div>
+
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToHome()">Home</button>
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToDashboard()">Estoque</button>
+    <button class="btn btn-outline-danger w-100 mt-2" (click)="goToLoja()">Loja</button>
+    <button class="btn btn-outline-danger w-100 mt-2" (click)="logout()">Logout</button>
+  </div>
+</div>
+<div class="container mt-4">
+  <h2>Painel de Estoque</h2>
+  <div class="centraliza-card">
+      <div class="card text-center p-3 card-total">
+        <h5>Total de Roupas</h5>
+        <p class="numero-total">{{ totalRoupas }}</p>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="lista">Lista de Roupas</h4>
+  <table class="table table-striped mt-3">
+    <thead class="cardtable">
+      <tr>
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Tecido</th>
+        <th>Tamanhos</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let roupa of roupas">
+        <td><img [src]="roupa.img" alt="imagem" width="80"></td>
+        <td>{{ roupa.nome }}</td>
+        <td>{{ roupa.tipoDeTecido }}</td>
+        <td>{{ roupa.tamanhos.join(', ') }}</td>
+        <td>
+          <button class="btn btn-info btn-sm" (click)="verEstoque(roupa.id)">Ver Estoque</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="roupaSelecionada" class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title">{{ roupaSelecionada.nome }}</h5>
+      <p *ngFor="let qtd of roupaSelecionada.quantidade; let i = index">
+        {{ roupaSelecionada.tamanhos[i] }}: {{ qtd }} unidades
+      </p>
+      <button class="btn btn-secondary btn-sm" (click)="fecharDetalhes()">Fechar</button>
+    </div>
+  </div>
+

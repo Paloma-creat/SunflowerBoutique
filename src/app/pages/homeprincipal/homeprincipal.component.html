@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+
+<main class="carousel-box">
+  <button (click)="previous()">⟨</button>
+
+  <div class="carousel-image-box">
+    <img [src]="imageList[currentIndex].image" alt="Imagem Produto" />
+    <div class="carousel-title">
+      {{ imageList[currentIndex].title }}
+    </div>
+  </div>
+
+  <button (click)="next()">⟩</button>
+</main>
+<app-footer></app-footer>
