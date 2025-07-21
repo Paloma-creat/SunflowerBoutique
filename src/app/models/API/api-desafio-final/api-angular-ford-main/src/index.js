@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public/img")));
 app.post("/login", (req, res) => {
     try {
+        console.log(req.body);
         const { nome, senha } = req.body
 
         if (!nome || !senha) {
@@ -32,6 +33,7 @@ app.post("/login", (req, res) => {
         });
 
     } catch (error) {
+        console.error(error);
         return res.status(500).json({
             message: "Falha na comunicação com o servidor!"
         });
@@ -46,28 +48,28 @@ app.get("/roupas", (req, res) => {
                 nome:"Vestido Midi formas Geometricas",
                 tipoDeTecido:"Poliamida",
                 tamanhos: ["P","M","G","GG"],
-                img: "http://localhost:3001/midigeografico.jpeg"
+                img: "https://api-hc6z.onrender.com/midigeografico.jpeg"
             },
             {
                 id: 2,
                 nome:"Vestido Midi Floral",
                 tipoDeTecido:"Poliamida",
                 tamanhos: ["P","M","G","GG"],
-                img: "http://localhost:3001/midifloral.jpeg"
+                img: "https://api-hc6z.onrender.com/midifloral.jpeg"
             },
             {
                 id: 3,
                 nome:"Vestido Ester",
                 tipoDeTecido:"Poliamida",
                 tamanhos: ["P","M","G","GG"],
-                img: "http://localhost:3001/vestidoester.jpeg"
+                img: "https://api-hc6z.onrender.com/vestidoester.jpeg"
             },
             {
                 id: 4,
                 nome:"Macacão Eduarda",
                 tipoDeTecido:"Algodão",
                 tamanhos: ["P","M","G","GG"],
-                img: "http://localhost:3001/macacaoeduarda.jpeg.jpeg"
+                img: "https://api-hc6z.onrender.com/macacaoeduarda.jpeg.jpeg"
             }
         ];
 
@@ -92,21 +94,21 @@ app.post("/estoque", (req, res) => {
             nome:"Vestido Midi formas Geometricas",
             quantidade:[5,7,5,4],
             tamanhos: ["P","M","G","GG"],
-            img: "http://localhost:3001/midigeografico.jpeg"
+            img: "https://api-hc6z.onrender.com/midigeografico.jpeg"
         },
         {
             id: 2,
             nome:"Vestido Midi Floral",
             quantidade:[4,5,3,2],
             tamanhos: ["P","M","G","GG"],
-            img: "http://localhost:3001/midifloral.jpeg"
+            img: "https://api-hc6z.onrender.com/midifloral.jpeg"
         },
         {
             id: 3,
             nome:"Vestido Ester",
             quantidade:[4,5,3,2],
             tamanhos: ["P","M","G","GG"],
-            img: "http://localhost:3001/vestidoester.jpeg.jpeg"
+            img: "https://api-hc6z.onrender.com/vestidoester.jpeg.jpeg"
         },
 
         {
@@ -114,7 +116,7 @@ app.post("/estoque", (req, res) => {
             nome:"Macacão Eduarda",
             quantidade:[4,5,3,2],
             tamanhos: ["P","M","G","GG"],
-            img: "http://localhost:3001/macacaoeduarda.jpeg"
+            img: "https://api-hc6z.onrender.com/macacaoeduarda.jpeg"
         }
     ];
 
@@ -133,5 +135,5 @@ app.post("/estoque", (req, res) => {
 
 
 app.listen(3001, () => {
-    console.log("http://localhost:3001/");
+    console.log("https://api-hc6z.onrender.com/");
 });
