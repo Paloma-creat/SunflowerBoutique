@@ -1,0 +1,45 @@
+/* Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ffae00;
+  background: #d2b35e;
+  position: sticky;
+  width: 100%;
+}
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centraliza verticalmente logo e menu */
+  padding: 0.5rem 2rem;
+  background: #d2b35e;
+   width: 100%;
+}
+
+.topo img.logo {
+  max-height: 80px; /* controle de altura para manter o alinhamento */
+  margin-right: 20%;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(65, 43, 12);
+  font-weight: 500;
+}
+nav a.active {
+  color: purple;
+}

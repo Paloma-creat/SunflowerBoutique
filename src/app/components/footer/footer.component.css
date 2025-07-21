@@ -1,0 +1,23 @@
+/* Rodapé */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d2b35e;
+  color: rgb(65, 43, 12);;
+  padding: 15px 30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-right img {
+  width: 40px;
+}
+
+footer img {
+  width: 25px;
+}

@@ -1,0 +1,43 @@
+
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(65, 43, 12);
+  font-size: 20px;
+}
+
+.carousel-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  gap: 40px;
+}
+
+.carousel-image-box {
+  text-align: center;
+}
+
+.carousel-image-box img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.carousel-title {
+  margin-top: 12px;
+  font-weight: bold;
+  color: rgb(65, 43, 12);;
+  font-size: 16px;
+}
+
+button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #816022;
+}
+

@@ -1,0 +1,173 @@
+/* Layout principal */
+.container {
+  padding: rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color:rgb(65, 43, 12);
+  margin-bottom: 2rem;
+}
+
+/* Card de resumo */
+.centraliza-card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10%  rgb(65, 43, 12);
+}
+
+.numero-total {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.card-total {
+  color: #dfc624;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* Tabela */
+table {
+  background-color:rgb(65, 43, 12);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgb(65, 43, 12);
+  margin-top: 1rem;
+}
+
+thead.table-dark {
+  background-color: #111210;
+  color: white;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+td img {
+  border-radius: 8px;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+/* Botão de ação */
+.btn-info {
+  background-color: rgb(65, 43, 12);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+}
+
+.btn-info:hover {
+  background-color: #dfc624;
+}
+
+/* Card de detalhes */
+.card.mt-4 {
+  border: 1px solid #dfc624;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgb(65, 43, 12);
+}
+
+.card-body p {
+  margin-bottom: 0.3rem;
+}
+
+/* Botão fechar */
+.btn-secondary {
+  background-color: rgb(65, 43, 12);
+  color:#f1f1ef;
+  border: none;
+  font-weight: 500;
+  
+}
+
+.btn-secondary:hover {
+  background-color: #dfc624;
+}
+.lista{
+ color:rgb(65, 43, 12);
+  border: none;
+  font-weight: 500;
+  
+}
+/* Botão do menu lateral */
+.menu-btn {
+  position: absolute;
+   left: 0;
+  top: 0; 
+  width: 110px; 
+background-color: #d2b35e
+}
+
+/* Estilo do menu lateral (offcanvas) */
+.offcanvas {
+  background-color: #f7bf27(0, 0, 0, 0.85);
+  color: #f7bf27;
+}
+
+/* Cabeçalho do menu */
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo da Sunflower no menu */
+.offcanvas-body img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100px;
+}
+
+/* Botões do menu */
+.offcanvas-body .btn {
+  color:#816022;
+  border-color: #fac768;
+}
+
+.offcanvas-body .btn:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card.text-bg-primary .fs-3 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+    
+  }
+
+  td img {
+    width: 60px;
+  }
+}
+
+
+

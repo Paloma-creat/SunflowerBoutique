@@ -1,0 +1,15 @@
+<div class="carousel-box">
+  <div
+    class="carousel-image"
+    [style.backgroundImage]="'url(' + imageList[currentIndex].image + ')'"
+  ></div>
+
+  <div class="carousel-title">
+    <a [href]="imageList[currentIndex].url">
+      {{ imageList[currentIndex].title }}
+    </a>
+  </div>
+
+  <button (click)="previous()">⟨</button>
+  <button (click)="next()">⟩</button>
+</div>

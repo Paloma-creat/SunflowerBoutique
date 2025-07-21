@@ -1,0 +1,55 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ebac2f;
+  margin: 0;
+}
+
+
+.forms {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.forms img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+.titulo{
+  color:rgb(65, 43, 12) ;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.fordform {
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(65, 43, 12);
+}
+
+.consentimento p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.6rem;
+  background-color: #816022;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+

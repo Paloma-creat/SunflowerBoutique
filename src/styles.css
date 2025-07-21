@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+    height: 100vh;  
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

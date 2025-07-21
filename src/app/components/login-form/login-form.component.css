@@ -1,0 +1,57 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(253, 252, 250);
+}
+
+.tela-login {
+  display: flex;
+  height: 100vh;
+  
+}
+
+.imagem-lado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddc184;
+}
+
+.imagem-lado img {
+  width: 280px;
+}
+
+.formulario-lado {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  background-color: #ddc184;
+}
+
+.logo-ford {
+  width: 150px;
+  
+}
+.ajuste{
+
+background-color: #efff;
+
+
+}
+  .shadow{
+    background-color: rgb(233, 243, 243);
+     padding: 45px;
+  }
+
+#button{
+  background-color: #f0a608;
+}
+
+.text-success{
+  font-family: "Libertinus Mono", monospace;
+}
+
