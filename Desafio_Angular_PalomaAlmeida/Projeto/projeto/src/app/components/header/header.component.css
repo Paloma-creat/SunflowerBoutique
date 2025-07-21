@@ -1,4 +1,9 @@
 /* Cabeçalho */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 header {
   display: flex;
   align-items: center;
@@ -6,8 +11,11 @@ header {
   border-bottom: 1px solid #ffae00;
   background: #d2b35e;
   position: sticky;
+  top: 0;
+  z-index: 1000;
   width: 100%;
 }
+
 .topo {
   display: flex;
   justify-content: space-between;
@@ -15,11 +23,13 @@ header {
   padding: 0.5rem 2rem;
   background: #d2b35e;
    width: 100%;
+   gap: 20px;
 }
 
 .topo img.logo {
   max-height: 80px; /* controle de altura para manter o alinhamento */
-  gap: 20px;
+  margin-right: 200px;
+  
 }
 .container {
   margin: 0 auto;
