@@ -19,3 +19,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
   }
+
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
