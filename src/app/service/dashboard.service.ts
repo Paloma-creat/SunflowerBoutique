@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RoupaService {
-  private api = 'http://localhost:3001/';
+  private api = 'https://api-hc6z.onrender.com/';
 
   constructor(private http: HttpClient) {}
 
   getRoupas(): Observable<any> {
-    return this.http.get("http://localhost:3001/roupas");
+    return this.http.get("https://api-hc6z.onrender.com/roupas");
   }
 
   getEstoque(id: number): Observable<any> {
-    return this.http.post<any>("http://localhost:3001/estoque", { id });
+    return this.http.post<any>("https://api-hc6z.onrender.com/estoque", { id });
   }
 }

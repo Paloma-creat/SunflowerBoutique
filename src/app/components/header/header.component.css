@@ -5,6 +5,8 @@ header {
   padding: 10px 30px;
   border-bottom: 1px solid #ffae00;
   background: #d2b35e;
+  position: sticky;
+  width: 100%;
 }
 .topo {
   display: flex;
@@ -12,6 +14,7 @@ header {
   align-items: center; /* centraliza verticalmente logo e menu */
   padding: 0.5rem 2rem;
   background: #d2b35e;
+   width: 100%;
 }
 
 .topo img.logo {
@@ -19,7 +22,6 @@ header {
   margin-right: 20%;
 }
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
