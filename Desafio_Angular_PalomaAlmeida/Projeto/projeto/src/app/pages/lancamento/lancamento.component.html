@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+
+<main>
+  <div class="grid-produtos">
+    <div *ngFor="let p of produtos" class="card">
+      <img [src]="p.image" alt="{{ p.nome }}" class="prod-img" />
+      <div class="info">
+        <label><input type="checkbox" /> <span>{{ p.nome }}</span></label>
+        <p class="preco">Preço: {{ p.preco }}</p>
+        <p class="obs">Obs: {{ p.obs }}</p>
+        <a [href]="p.link" target="_blank"><button>Comprar</button></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

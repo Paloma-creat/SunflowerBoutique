@@ -1,35 +1,34 @@
 <table class="mt-2 table">
     <thead>
         <tr>
-            <th class="p-3">VIN</th>
-            <th class="p-3">ODOMETRO</th>
-            <th class="p-3">NÍVEL DO COMBUSTÍVEL</th>
-            <th class="p-3">STATUS</th>
-            <th class="p-3">LATITUDE</th>
-            <th class="p-3">LONGITUDE</th>
+            <th class="p-3">Codigos</th>
+            <th class="p-3">Carrinhos Abandonados</th>
+            <th class="p-3">NÍVEL De Satisfação</th>
+            <th class="p-3">Pedidos</th>
+            <th class="p-3">Afiliados</th>
+            <th class="p-3">Cliente Fidelizados</th>
         </tr>
     </thead>
     <tbody>
         <tr>           
              <!--<td class="d-flex">
-                 <input (change)="onChangeVin($event)" type="text" placeholder="{{vin}}" value="{{vin}}"class="w=100 align-se">
+                 <input (change)="onChangeVin($event)" type="text" placeholder="{Codigos}}" value="{{Codigos}}"class="w=100 align-se">
                  
 
             </td>
-            <td class="p-3">{{odometro}}KM </td>
-            <td class="p-3">{{nivelCombustivel}}% </td>
-            <td class="p-3">{{status.toUpperCase()}} </td>
-            <td class="p-3">{{lat}} </td>
-            <td class="p-3">{{long}} </td>-->
+            <td class="p-3">{{Carrinhos Abandonados}} </td>
+            <td class="p-3">{{NÍVEL De Satisfação}}% </td>
+            <td class="p-3">{{Pedidos.toUpperCase()}} </td>
+            <td class="p-3">{{Afiliados}} </td>
+            <td class="p-3">{{Cliente Fidelizados}} </td>-->
 
-     <td class="d-flex" data-label="VIN">
-      <input (change)="onChangeVin($event)" type="text" placeholder="{{vin}}" [value]="vin" class="vin-input">
+     <td class="d-flex" data-label="Codigos">
+      <input (change)="onChangeVin($event)" type="text" placeholder="{{Codigos}}" [value]="Codigos" class="vin-input">
     </td>
-    <td class="p-3" data-label="Odômetro">{{odometro}}KM</td>
-    <td class="p-3" data-label="Nível do Combustível">{{nivelCombustivel}}%</td>
-    <td class="p-3" data-label="Status">{{status.toUpperCase()}}</td>
-    <td class="p-3" data-label="Latitude">{{lat}}</td>
-    <td class="p-3" data-label="Longitude">{{long}}</td>
+    <td class="p-3" data-label="Carrinhos Abandonados">{{CarrinhosAbandonados}}</td>
+    <td class="p-3" data-label="Nivel De Satisfação">{{NivelDeSatisfacao}}</td>
+    <td class="p-3" data-label="Pedidos">{{Pedidos.toString().toUpperCase() }}</td>
+    <td class="p-3" data-label="Cliente Fidelizados">{{ClienteFidelizado}}</td>
         </tr>
     </tbody>
 </table>

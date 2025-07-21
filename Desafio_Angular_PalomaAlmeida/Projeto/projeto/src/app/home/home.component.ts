@@ -10,10 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+goToLoja() {
+  this.router.navigate(['/homeprincipal']);
+throw new Error('Method not implemented.');
+}
   router = inject(Router);
 
   logout() {
     sessionStorage.clear();
     this.router.navigate(['']); 
-  }
+ }
+
 }

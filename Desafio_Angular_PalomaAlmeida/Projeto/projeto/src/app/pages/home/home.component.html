@@ -1,3 +1,8 @@
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+</head>
+
 <!-- Botão para abrir o menu lateral -->
 <button
   class="btn btn-light menu-btn"
@@ -21,21 +26,22 @@
 
   <div class="offcanvas-body">
     <div class="text-center mb-3">
-      <img src="/img/ford.png" alt="Logo Ford" style="width: 100px;" />
+      <img src="img/Logo.png" alt="Logo Sunflower Boutique" style="width: 100px;" />
     </div>
     
     <!-- Botões do menu -->
-    <button class="btn btn-outline-primary w-100 mb-2" routerLink="/dashboard">Home</button>
-    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToDashboard()">Dashboard</button>
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToHome()">Home</button>
+    <button class="btn btn-outline-primary w-100 mb-2" (click)="goToDashboard()">Estoque</button>
+    <button class="btn btn-outline-danger w-100 mt-2" (click)="goToLoja()">Loja</button>
     <button class="btn btn-outline-primary w-100 mt-2" (click)="logout()">Logout</button>
   </div>
 </div>
 
 <!-- Imagem de fundo -->
-<img src="/img/ranger.png" class="bg-image" alt="Carro Ford" />
+<img src="/img/Short Alfaiataria com Cinto.jpeg " class="bg-image" alt="Vestido Ester" />
 
 <!-- Conteúdo Central -->
 <div class="center-box">
-  <h2>Sistema de dados FORD</h2>
+  <h2>Sistema de dados Sunflower Boutique</h2>
   <p>Seja bem-vindo(a)!</p>
 </div>

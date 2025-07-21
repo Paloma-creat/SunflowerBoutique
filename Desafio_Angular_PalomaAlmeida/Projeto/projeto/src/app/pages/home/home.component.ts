@@ -9,8 +9,13 @@ declare var bootstrap: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+gotohome: any;
+goToHome: any;
   constructor(private router: Router) {}
-
+goToLoja() {
+    // Implemente a lógica para redirecionar para a loja
+    this.router.navigate(['/homeprincipal']); // Exemplo de navegação Angular
+  }
   logout() {
     sessionStorage.clear();
     this.router.navigate(['/login']); // ou ['/login'] se preferir
@@ -25,4 +30,5 @@ export class HomeComponent {
 
     this.router.navigate(['/dashboard']);
   }
+   
 }

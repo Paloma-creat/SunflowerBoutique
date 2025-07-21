@@ -1,22 +1,20 @@
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Veiculo, VinInfos } from '../models/car';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService {
-  private http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3001';
+export class RoupaService {
+  private api = 'https://api-hc6z.onrender.com/';
 
-  // GET /veiculos
-  getVeiculos(): Observable<Veiculo[]> {
-    return this.http.get<Veiculo[]>("http://localhost:3001/vehicles");
+  constructor(private http: HttpClient) {}
+
+  getRoupas(): Observable<any> {
+    return this.http.get("https://api-hc6z.onrender.com/roupas");
   }
 
-  // GET /vin/:codigo
-  getVinInfos(vin:string){
-    return this.http.post<VinInfos>("http://localhost:3001/vehicleData",{vin})
+  getEstoque(id: number): Observable<any> {
+    return this.http.post<any>("https://api-hc6z.onrender.com/estoque", { id });
   }
 }

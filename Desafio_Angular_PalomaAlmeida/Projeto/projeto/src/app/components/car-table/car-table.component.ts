@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
-import { DashboardService } from '../../service/dashboard.service';
+import { RoupasService } from '../../service/dashboard.service';
+
 
 @Component({
   selector: 'app-car-table',
@@ -8,25 +9,31 @@ import { DashboardService } from '../../service/dashboard.service';
   styleUrl: './car-table.component.css'
 })
 export class CarTableComponent {
-  @Input() vin: string= ""
-  @Input() odometro: number = 0
-  @Input() nivelCombustivel: number = 0
-  @Input() status: string = ""
-  @Input() lat: number = 0
-  @Input() long: number = 0
+  @Input()Codigos: string[] | undefined; 
+  @Input() CarrinhosAbandonados: number = 0
+  @Input() NivelDeSatisfação: number = 0
+  @Input() Pedidos: number  = 0
+  @Input() Afiliados: number = 0
+  @Input() ClienteFidelizados: number = 0
 
-  dashboardService = inject(DashboardService)
+  dashboardService = inject(RoupasService)
+N: any;
+ClienteFidelizado: any;
+NivelDeSatisfa: any;
+NivelDeSatisfac: any;
+NivelDeSatisfacao: any;
+  RoupasService: any;
 
   onChangeVin(event: Event ){
     const vin = (event.target as HTMLInputElement).value
-    this.dashboardService.getVinInfos(vin).subscribe({
+    this.RoupasService.RoupasService(vin).subscribe({
       error:() => {},
-      next: (vinInfos) => {
-        this.odometro=vinInfos.odometro
-        this.nivelCombustivel=vinInfos.nivelCombustivel
-        this.status=vinInfos.status
-        this.lat=vinInfos.lat
-        this.long=vinInfos.long
+      next: (vinInfos: { CarrinhosAbandonados: number; NivelDeSatisfação: number; Pedidos: string; Afiliados: number; ClienteFidelizados: number; }) => {
+        this.CarrinhosAbandonados=vinInfos.CarrinhosAbandonados
+        this.NivelDeSatisfação=vinInfos.NivelDeSatisfação
+        this.Pedidos=vinInfos.Pedidos
+        this.Afiliados=vinInfos.Afiliados
+        this.ClienteFidelizados=vinInfos.ClienteFidelizados
       }
 
     })

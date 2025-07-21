@@ -1,4 +1,5 @@
 export type Veiculo = {
+Codigos: string
     
     id:number
     vehicle: string
@@ -9,6 +10,8 @@ export type Veiculo = {
     img: string
 }
 export type VinInfos = {
+    CarrinhosAbandonados: any
+    NivelDeSatisfação: any
 
     id:number
     odometro: number

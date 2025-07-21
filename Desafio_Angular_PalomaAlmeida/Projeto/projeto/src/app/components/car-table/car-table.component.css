@@ -22,7 +22,7 @@ table {
   width: 100%;
   table-layout: fixed;/**/
   border-collapse: collapse;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(223, 5, 5, 0.1);
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;

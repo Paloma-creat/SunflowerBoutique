@@ -1,12 +1,15 @@
-=
+<Head><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet"></Head>
+
 <div class="tela-login">
   <div class="imagem-lado">
-    <img src="img/ranger.png" alt="Caminhonete" />
+    <img src="img/vestido.png" alt="vestido" /><img src="img/macacao1.png" alt="macacão" /><img src="img/geometrico.png" alt="vestido" />
   </div>
 
   <div class="formulario-lado">
-    <img src="img/ford.png" alt="Logo Ford" class="logo-ford" />
-    <h2 class="text-success">Boas-vindas</h2> 
+    <img src="img/Logo.png" alt="Logo Ford" class="logo-ford" />
+    <h2  class="text-success">Boas-vindas</h2> 
     <div class="ajuste">
     <form [formGroup]="loginForm" (ngSubmit)="onAcessoLogin()" class="shadow border border-primary-subtle rounded">
         <div class="mb-3">
@@ -21,6 +24,6 @@
            <input type="checkbox" class="form-check-input" id="lembrar">
         <label class="form-check-label" for="lembrar">Logar automaticamente</label>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        <button type="submit" id="button" class="btn btn-primary w-100">Entrar</button>
       </form>
     </div>
