@@ -5,13 +5,16 @@ body, html {
   background-color: rgb(253, 252, 250);
 }
 
+/* Container principal */
 .tela-login {
   display: flex;
   height: 100vh;
-  
+  flex-direction: row;
 }
 
+/* Lado da imagem */
 .imagem-lado {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +23,10 @@ body, html {
 
 .imagem-lado img {
   width: 280px;
+  max-width: 90%;
 }
 
+/* Lado do formulário */
 .formulario-lado {
   flex: 1;
   display: flex;
@@ -30,28 +35,78 @@ body, html {
   align-items: center;
   padding: 45px;
   background-color: #ddc184;
+  box-sizing: border-box;
 }
 
+/* Logo */
 .logo-ford {
   width: 150px;
-  
+  max-width: 100%;
 }
-.ajuste{
 
-background-color: #efff;
-
-
+/* Ajuste de cor */
+.ajuste {
+  background-color: #efff;
 }
-  .shadow{
-    background-color: rgb(233, 243, 243);
-     padding: 45px;
-  }
 
-#button{
+.shadow {
+  background-color: rgb(233, 243, 243);
+  padding: 45px;
+  box-sizing: border-box;
+}
+
+/* Botão */
+#button {
   background-color: #f0a608;
 }
 
-.text-success{
+/* Texto */
+.text-success {
   font-family: "Libertinus Mono", monospace;
 }
 
+/* ---------- Responsividade ---------- */
+
+@media (max-width: 768px) {
+  .tela-login {
+    flex-direction: column; /* empilha verticalmente */
+  }
+
+  .imagem-lado {
+    height: 200px;
+  }
+
+  .imagem-lado img {
+    width: 180px;
+  }
+
+  .formulario-lado {
+    padding: 25px;
+  }
+
+  .shadow {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagem-lado {
+    height: 150px;
+  }
+
+  .imagem-lado img {
+    width: 140px;
+  }
+
+  .formulario-lado {
+    padding: 20px;
+  }
+
+  .shadow {
+    padding: 20px;
+  }
+
+  .logo-ford {
+    width: 120px;
+  }
+}

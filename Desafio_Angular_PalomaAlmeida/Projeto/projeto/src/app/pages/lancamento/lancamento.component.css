@@ -1,20 +1,22 @@
-
-
 /* Grid produtos */
 .grid-produtos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
 }
 
+/* Card de produto */
 .card {
   background: #fff;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  width: calc(33.333% - 26.67px); /* 3 por linha com gap de 20px */
+  box-shadow: 0 4px 5% rgba(0,0,0,0.1);
+  overflow:hidden;
   transition: transform .2s;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 12000px;
 }
 
 .card:hover {
@@ -22,9 +24,12 @@
 }
 
 .prod-img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
+   width: 100%;
+  aspect-ratio: 3 / 4; /* proporção ideal para fotos verticais */
+  object-fit: contain; /* exibe a imagem completa */
+  display: block;
+  background-color: #f5f5f5; /* evita fundo branco puro caso a imagem não preencha */
+  border-bottom: 1px solid #ddd
 }
 
 .info {
@@ -41,15 +46,16 @@
   font-weight: bold;
 }
 
-.preco, .obs {
+.preco,
+.obs {
   margin: 0;
   color: #555;
   font-size: 14px;
 }
 
 button {
-  background:  rgb(65, 43, 12);
-  color: rgb(255, 255, 255);
+  background: rgb(65, 43, 12);
+  color: white;
   border: none;
   padding: 8px;
   border-radius: 4px;
@@ -60,3 +66,37 @@ button:hover {
   background: rgb(214, 225, 65);
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 20px); /* 2 por linha */
+  }
+}
+
+  .prod-img {
+    height: 240px;
+  }
+
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .prod-img {
+    height: 200px;
+  }
+
+  .info {
+    padding: 12px;
+  }
+
+  .preco, .obs {
+    font-size: 13px;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 14px;
+  }
+}

@@ -40,6 +40,27 @@ export class LancamentoComponent {
       preco: 'R$ 65,00',
       obs: 'Tecido em Poliéster',
       link: 'https://www.instagram.com/boutique.sunfllower'
+    },
+    {
+      image: 'img/geometrico midi.jpeg',
+      nome: 'Vestido Geometrico',
+      preco: 'R$ 120,00',
+      obs: 'Tecido em Poliéster',
+      link: 'https://www.instagram.com/boutique.sunfllower'
+    },
+    {
+      image: 'img/floral midi.jpeg',
+      nome: 'Vestido Floral',
+      preco: 'R$ 120,00',
+      obs: 'Tecido em Poliéster',
+      link: 'https://www.instagram.com/boutique.sunfllower'
+    },
+    {
+      image: 'img/Macacão.jpeg',
+      nome: 'Vestido Geometrico',
+      preco: 'R$ 110,00',
+      obs: 'Tecido em Alfaiataria',
+      link: 'https://www.instagram.com/boutique.sunfllower'
     }
   ];
 }
